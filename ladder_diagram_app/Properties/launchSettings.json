@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ladder_diagram_app": {
+      "commandName": "Project",
+      "workingDirectory": "D:\\wpf_apps\\ladder_diagram_app"
+    }
+  }
+}

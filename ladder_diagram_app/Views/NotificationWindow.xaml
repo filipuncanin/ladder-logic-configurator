@@ -1,0 +1,109 @@
+﻿<Window x:Class="ladder_diagram_app.Views.NotificationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="Manual">
+
+    <Window.Resources>
+        <!-- Stil za dugmad -->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FF616161"/>
+            <Setter Property="Foreground" Value="#FFFFFFFF"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Width" Value="90"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Margin" Value="10,0,10,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="8"
+                                BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF757575"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#FF424242"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- Stil za TextBox -->
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#FF424242"/>
+            <Setter Property="Foreground" Value="#FFE0E0E0"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="Margin" Value="10,0,0,0"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#FF616161"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border x:Name="Border" Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="Border" Property="BorderBrush" Value="#FF757575"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Border CornerRadius="12" Background="#D0323232" Padding="15">
+        <StackPanel VerticalAlignment="Center" Margin="10">
+            <TextBlock x:Name="MessageText" Foreground="#FFE0E0E0" FontSize="16" TextWrapping="Wrap" 
+                       HorizontalAlignment="Center" TextAlignment="Center" Margin="0,0,0,15"
+                       FontFamily="Segoe UI" FontWeight="Regular" MaxWidth="400"/>
+            <!-- Polja za unos -->
+            <StackPanel x:Name="InputPanel" Visibility="Collapsed">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock x:Name="Input1Label" Foreground="#FFE0E0E0" FontSize="14" 
+                               VerticalAlignment="Center" TextAlignment="Right"/>
+                    <TextBox x:Name="Input1TextBox" Visibility="Collapsed"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Visibility="Collapsed">
+                    <TextBlock x:Name="Input2Label" Foreground="#FFE0E0E0" FontSize="14" 
+                               VerticalAlignment="Center" TextAlignment="Right"/>
+                    <TextBox x:Name="Input2TextBox" Visibility="Collapsed"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Visibility="Collapsed">
+                    <TextBlock x:Name="Input3Label" Foreground="#FFE0E0E0" FontSize="14" 
+                               VerticalAlignment="Center" TextAlignment="Right"/>
+                    <TextBox x:Name="Input3TextBox" Visibility="Collapsed"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel x:Name="ButtonPanel" Orientation="Horizontal" HorizontalAlignment="Center" Visibility="Collapsed">
+                <Button x:Name="YesButton" Content="YES"/>
+                <Button x:Name="NoButton" Content="NO"/>
+                <Button x:Name="OkButton" Content="CLOSE" Visibility="Collapsed"/>
+                <Button x:Name="ConfirmButton" Content="CONFIRM" Visibility="Collapsed"/>
+                <Button x:Name="CancelButton" Content="CANCEL" Visibility="Collapsed"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>

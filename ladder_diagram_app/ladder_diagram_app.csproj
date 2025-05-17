@@ -1,0 +1,154 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+	<TargetFramework>net8.0-windows10.0.20348.0</TargetFramework>
+	<TargetPlatformVersion>10.0.20348.0</TargetPlatformVersion>
+	<TargetPlatformMinVersion>10.0.18362.0</TargetPlatformMinVersion>
+	<EnablePreviewFeatures>true</EnablePreviewFeatures>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <PackageIcon></PackageIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\add.png" />
+    <None Remove="Resources\add_icon.png" />
+    <None Remove="Resources\add_icon_2.png" />
+    <None Remove="Resources\Branch\branch_icon.png" />
+    <None Remove="Resources\branch_icon.png" />
+    <None Remove="Resources\coil.png" />
+    <None Remove="Resources\Compare\equal.png" />
+    <None Remove="Resources\Compare\greater.png" />
+    <None Remove="Resources\Compare\greater_or_equal.png" />
+    <None Remove="Resources\Compare\less.png" />
+    <None Remove="Resources\Compare\less_or_equal.png" />
+    <None Remove="Resources\Compare\not_equal.png" />
+    <None Remove="Resources\div_icon.png" />
+    <None Remove="Resources\icon.ico" />
+    <None Remove="Resources\latch_coil.png" />
+    <None Remove="Resources\Math\add.png" />
+    <None Remove="Resources\Math\divide.png" />
+    <None Remove="Resources\Math\move.png" />
+    <None Remove="Resources\Math\multiply.png" />
+    <None Remove="Resources\Math\subtract.png" />
+    <None Remove="Resources\move_icon.png" />
+    <None Remove="Resources\mul_icon.png" />
+    <None Remove="Resources\nc_contact.png" />
+    <None Remove="Resources\negated_coil.png" />
+    <None Remove="Resources\no_contact.png" />
+    <None Remove="Resources\one_shot_negative_contact.png" />
+    <None Remove="Resources\one_shot_positive_coil.png" />
+    <None Remove="Resources\one_shot_positive_contact.png" />
+    <None Remove="Resources\reset_coil.png" />
+    <None Remove="Resources\set_coil.png" />
+    <None Remove="Resources\sub_icon.png" />
+    <None Remove="Resources\Time_Count\count_down.png" />
+    <None Remove="Resources\Time_Count\count_up.png" />
+    <None Remove="Resources\Time_Count\off_delay_timer.png" />
+    <None Remove="Resources\Time_Count\on_delay_timer.png" />
+    <None Remove="Resources\Time_Count\reset.png" />
+    <None Remove="Resources\Time_Count\retentive_timer.png" />
+    <None Remove="Resources\unlatch_coil.png" />
+  </ItemGroup>
+
+   <ItemGroup>
+    <SupportedPlatform Include="windows" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MQTTnet" Version="4.3.3.952" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Compare\equal.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Compare\greater.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Compare\greater_or_equal.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Compare\less.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Compare\less_or_equal.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Compare\not_equal.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Branch\branch_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Coils\coil.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Contacts\nc_contact.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Contacts\no_contact.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Coils\one_shot_positive_coil.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Coils\reset_coil.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Coils\set_coil.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\icon.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Math\add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Math\divide.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Math\move.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Math\multiply.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Math\subtract.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Time_Count\count_down.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Time_Count\count_up.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Time_Count\off_delay_timer.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Time_Count\on_delay_timer.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Time_Count\reset.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Time_Count\retentive_timer.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

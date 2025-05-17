@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="ladder_diagram_app.UserControls.TimePicker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ladder_diagram_app.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="80">
+    <Grid>
+        <TextBlock x:Name="TimeDisplay" 
+                   Text="00:00:00" 
+                   MouseLeftButtonUp="TimeDisplay_MouseLeftButtonUp"
+                   HorizontalAlignment="Center"/>
+        <Popup x:Name="ConfigPopup" 
+               StaysOpen="True" 
+               Placement="Bottom" 
+               PlacementTarget="{Binding ElementName=TimeDisplay}"
+               HorizontalOffset="0">
+            <Border Background="White" BorderThickness="1" BorderBrush="Gray" Padding="5,5,5,0">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <ComboBox x:Name="HoursComboBox" 
+                                  Width="45" 
+                                  MaxDropDownHeight="100"
+                                  SelectionChanged="ComboBox_SelectionChanged"/>
+                        <TextBlock Text=":" Margin="5,0"/>
+                        <ComboBox x:Name="MinutesComboBox" 
+                                  Width="45" 
+                                  MaxDropDownHeight="100"
+                                  SelectionChanged="ComboBox_SelectionChanged"/>
+                        <TextBlock Text=":" Margin="5,0"/>
+                        <ComboBox x:Name="SecondsComboBox" 
+                                  Width="45" 
+                                  MaxDropDownHeight="100"
+                                  SelectionChanged="ComboBox_SelectionChanged"/>
+                    </StackPanel>
+                    <Button Content="Apply" 
+                            Margin="10" 
+                            Height="25"
+                            HorizontalAlignment="Stretch"
+                            Click="ApplyButton_Click"/>
+                </StackPanel>
+            </Border>
+        </Popup>
+    </Grid>
+</UserControl>
