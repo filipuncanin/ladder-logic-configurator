@@ -540,7 +540,7 @@ namespace ladder_diagram_app
                 if (parentGrid != null)
                 {
                     var row = Grid.GetRow(MonitorGrid);
-                    parentGrid.RowDefinitions[row].Height = isConnected ? new GridLength(100) : GridLength.Auto;
+                    parentGrid.RowDefinitions[row].Height = isConnected ? new GridLength(230) : GridLength.Auto;
                 }
 
                 // Show connection status notification
