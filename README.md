@@ -6,11 +6,6 @@ The **Ladder Diagram Configurator** is a C# WPF application designed for creatin
 ## Purpose and Scope
 The application aims to provide engineers, developers, and hobbyists with an intuitive tool for designing and implementing ladder logic on ESP32 devices. Through a graphical interface, users can create logic, configure variables, and monitor real-time data, making it ideal for automation, IoT, and industrial projects. This README serves as a guide for understanding, installing, and using the application, emphasizing its interaction with the ESP32.
 
-## Demo
-Watch the Ladder Diagram Configurator in action! This video demonstrates key features, including drag-and-drop diagram creation, branch configuration, and real-time monitoring.
-
-![Ladder Diagram Configurator Demo](./docs/demo.gif)
-
 ## Key Features
 The application offers a range of features to streamline interaction with ESP32 devices:
 
@@ -241,6 +236,11 @@ The ESP32 will activate the output if the temperature exceeds 25°C.
 - **Communication**: BLE uses Windows.Devices.Bluetooth, MQTT uses MQTTnet.
 - **Data Format**: JSON for configurations.
 - **Dependencies**: Listed in the project's NuGet packages.
+
+## Demo
+Watch the Ladder Diagram Configurator in action! This video demonstrates key features, including drag-and-drop diagram creation, branch configuration, and real-time monitoring.
+
+![Ladder Diagram Configurator Demo](./docs/demo.gif)
 
 ## Contributing
 1. Fork the repository.
