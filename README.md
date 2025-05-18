@@ -9,7 +9,7 @@ The application aims to provide engineers, developers, and hobbyists with an int
 ## Demo
 Watch the Ladder Diagram Configurator in action! This video demonstrates key features, including drag-and-drop diagram creation, branch configuration, and real-time monitoring.
 
-![Ladder Diagram Configurator Demo](./docs/demo.mp4)
+![Ladder Diagram Configurator Demo](./docs/demo.gif)
 
 ## Key Features
 The application offers a range of features to streamline interaction with ESP32 devices:
